@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+  </head>
+  <body>
+    <!-- 测试第一个 Vue 程序 -->
+    <div id="app">
+      <p>{{ message }}</p>
+    </div>
+
+    <script>
+      new Vue({
+        // 条件选择器
+        el: "#app",
+        // 输出变量
+        data: {
+          message: "Hello Vue.js!",
+        },
+      });
+    </script>
+  </body>
+</html>
