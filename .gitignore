@@ -1,8 +1,6 @@
 .gradle/
 .settings/
 .idea/
-node_modules/
-
 .classpath
 .project
 
