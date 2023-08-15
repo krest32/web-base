@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    function getValue() {
+        var a, b, c;
+        // void 该操作符指定要计算一个表达式但是不返回值。
+        a = void (b = 5, c = 7);
+        document.write('a = ' + a + ' b = ' + b + ' c = ' + c);
+    }
+</script>
+</head>
+
+<body>
+
+    <p>点击以下按钮查看结果：</p>
+    <form>
+        <input type="button" value="点我" onclick="getValue();" />
+    </form>
+</body>
+
+</html>
