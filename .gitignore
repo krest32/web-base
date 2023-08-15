@@ -1,8 +1,11 @@
 .gradle/
 .settings/
+node_modules/
 .idea/
 .classpath
 .project
+
+
 
 target/
 build/
