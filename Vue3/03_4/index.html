@@ -8,13 +8,16 @@
 
 
 <body>
-<div id="app"></div>
+<div id="app">
+    <demo/>
+</div>
 </body>
 
 
 <script type="module">
     import {createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-    import MyComponent from './my-component.js'
+    import demo from './demo.vue'
 
-    createApp(MyComponent).mount('#app')
+    const app = createApp
+    app.component('demo', demo)
 </script>
