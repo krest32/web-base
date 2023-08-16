@@ -1,0 +1,80 @@
+{
+    //服务器的地址，是必须的选项
+    url: '/user',
+
+    //请求的方式，若没有则默认是get
+    method:'get',
+
+    //如果url不是绝对地址，则会加上baseURL
+    baseURL: 'http://localhost:3000/',
+
+    //transformRequest允许请求的数据在发送至服务器之前进行处理，这个属性只适用于put、post、patch方式
+    //数组的最后一个函数必须返回一个字符串或者一个'ArrayBuffer'或'Stream'或'Buffer' 实例或'ArrayBuffer'，'Formdata'，
+    //若函数中用到了headers，则需要设置headers属性
+    transformRequest: [function(data,headers){
+        //根据需求对数据进行处理
+        return data;
+    }],
+
+    //transformResponse允许对返回的数据传入then/catch之前进行处理
+    transformResponse:[function(data){
+        //依需要对数据进行处理
+        return data;
+    }],
+
+    //headers是自定义的要被发送的信息头
+    headers: {'X-Requested-with':'XMLHttpRequest'},
+
+    //params是请求连接中的请求参数，必须是一个纯对象
+    params:{
+      ID:12345
+    },
+
+    //paramsSerializer用于序列化参数
+    paramsSerializer: function(params){
+      return Qs.stringify(params,{arrayFormat:'brackets'});
+    },
+
+    //data是请求时作为请求体的数据——request.body
+    //只适用于put、post、patch请求方法
+    //浏览器:FormData，File，Blob;Node:stream
+    data:{
+      firstName: 'simon',
+    },
+
+    //timeout定义请求的时间，单位是毫秒，如果请求时间超过设定时间，请求将停止
+    timeout:1000,
+
+    //withCredentials表明跨跨域请求书否需要证明。
+    withCredentials:false, //默认值
+
+    //adapter适配器，允许自定义处理请求
+    //返回一个promise
+    adapter:function(config){
+        /*...*/
+    },
+
+    //auth表明HTTP基础的认证应该被使用，并提供证书
+    auth:{
+      username:'simon',
+      password:'123456',
+    },
+
+    //responseType表明服务器返回的数据类型，这些类型包括：json/blob/document/ 		arraybuffer/text/stream
+     responseType: 'json',
+
+     //proxy定义服务器的主机名和端口号
+     //auth属性表明HTTP基本认证应该跟proxy相连接，并提供证书
+     //这将设置一个'Proxy-Authorization'头(header)，覆盖原来自定义的
+     proxy:{
+         host:127.0.0.1,
+         port:8080,
+         auth:{
+             username:'simon',
+             password:'123456'
+         }
+     },
+
+     //取消请求
+     cancelToken: new CancelToken(cancel=>{})
+}

@@ -1,7 +1,11 @@
 {
   "name": "web-base",
   "version": "1.0.0",
+  "type": "module",
   "dependencies": {
-    "vue": "^3.3.4"
+    "axios": "^1.4.0",
+    "babel-jest": "^29.6.2",
+    "vue": "^3.3.4",
+    "xmlhttprequest": "^1.8.0"
   }
 }
