@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Vue3</title>
+</head>
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+
+
+</script>
+<body>
+<div id="app">
+    <p>{{ message }}</p>
+</div>
+</body>
+
+
+
+
+<script type="module">
+    import {createApp} from 'vue'
+    // 我们可以使用导入映射表 (Import Maps) 来告诉浏览器如何定位到导入的 vue：
+    createApp({
+        data() {
+            return {
+                message: 'Hello vue!'
+            }
+        }
+    }).mount('#app')
+</script>
