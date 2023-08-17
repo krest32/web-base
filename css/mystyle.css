@@ -1,9 +1,11 @@
 h1 {
-  color: sienna;
+    color: sienna;
 }
+
 p {
-  margin-left: 20px;
+    margin-left: 20px;
 }
+
 body {
-  background-color: rgb(228, 158, 158);
+    background-color: rgb(228, 158, 158);
 }
