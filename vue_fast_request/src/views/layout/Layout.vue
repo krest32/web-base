@@ -26,7 +26,11 @@
           <router-link to="/about">联系</router-link>
         </a>
       </li>
-      <li style="float: right"><a href="/login">登陆</a></li>
+      <li style="float: right">
+        <a >
+          <router-link to="/login">登陆</router-link>
+        </a>
+      </li>
     </ul>
   </div>
   <!-- 数据区域  -->

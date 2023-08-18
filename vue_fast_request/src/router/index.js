@@ -34,6 +34,7 @@ const index = createRouter({
                     name: "home",
                     hidden: false,
                     component: Home,
+                    meta: {transition: 'slide-left'},
                 },
                 {
                     path: "/api",
@@ -41,6 +42,7 @@ const index = createRouter({
                     name: "welcome",
                     hidden: false,
                     component: Api,
+                    meta: {transition: 'slide-left'},
                 },
                 {
                     path: "/about",
@@ -48,6 +50,7 @@ const index = createRouter({
                     name: "about",
                     hidden: false,
                     component: About,
+                    meta: {transition: 'slide-left'},
                 }
             ]
         },
