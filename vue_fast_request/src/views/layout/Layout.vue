@@ -2,20 +2,42 @@
   <div class="header">
     <h1>我的网页</h1>
   </div>
+
+  <!--  导航栏  -->
   <div class="top_nav">
     <ul>
-      <li><a :class="{active:0 === narIndex}" href="/home" @click=clickNar(0)>主页</a></li>
-      <li><a :class="{active:1 === narIndex}" href="/api" @click=clickNar(1)>Api调用</a></li>
-      <li><a :class="{active:2 === narIndex}" href="#contact" @click=clickNar(2)>联系</a></li>
-      <li><a :class="{active:3 === narIndex}" href="/about" @click=clickNar(3)>关于</a></li>
+      <li>
+        <a :class="{ active: 0 === narIndex }" @click='clickNar(0)'>
+          <router-link to="/home">主页</router-link>
+        </a>
+      </li>
+      <li>
+        <a :class="{ active: 1 === narIndex }" @click='clickNar(1)'>
+          <router-link to="/api">Api调用</router-link>
+        </a>
+      </li>
+      <li>
+        <a :class="{ active: 2 === narIndex }" @click='clickNar(2)'>
+          <router-link to="/about">关于</router-link>
+        </a>
+      </li>
+      <li>
+        <a :class="{ active: 3 === narIndex }" @click='clickNar(3)'>
+          <router-link to="/about">联系</router-link>
+        </a>
+      </li>
       <li style="float: right"><a href="/login">登陆</a></li>
     </ul>
   </div>
+  <!-- 数据区域  -->
   <div class="row">
     <div class="left_column">
       <div class="card">
-        <router-view></router-view>
-<!--        <request/>-->
+        <router-view v-slot="{ Component }">
+          <transition name="fade">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </div>
     </div>
     <div class="right_column">
@@ -43,6 +65,7 @@
     </div>
   </div>
 
+  <!--  页面底部   -->
   <div class="footer">
     <div class="footer_nav">
       <a href="#">链接</a>
@@ -52,8 +75,7 @@
   </div>
 </template>
 <script setup>
-import request from '../api/Api.vue'
-import {ref} from "vue";
+import { ref } from "vue";
 
 // 设置设置面包屑导航选中效果
 const narIndex = ref(-1)
@@ -210,10 +232,6 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #a39d9d;
 }
 
 .active {

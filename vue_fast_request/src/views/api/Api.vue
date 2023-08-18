@@ -1,5 +1,5 @@
 <template>
-  <h2> Api 调用中心 </h2>
+  <h2>Api调用</h2>
   <div>
 
   </div>

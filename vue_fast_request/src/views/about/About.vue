@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h2>About 页面</h2>
+  <h2>关于</h2>
 </template>
 
 <style scoped>
