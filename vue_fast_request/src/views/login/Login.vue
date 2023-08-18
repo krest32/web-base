@@ -4,7 +4,10 @@
 
 <template>
   <div>
-    <h1> Api 调用中心 </h1>
+    <h1>login</h1>
   </div>
 </template>
 
+<style scoped>
+
+</style>

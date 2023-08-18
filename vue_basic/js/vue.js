@@ -3148,7 +3148,7 @@
       }
       if (vnode.data.keepAlive) {
         if (context._isMounted) {
-          // vue-router#1212
+          // vue-index#1212
           // During updates, a kept-alive component's child components may
           // change, so directly walking the tree here may call activated hooks
           // on incorrect children. Instead we push them into a queue which will
@@ -4361,7 +4361,7 @@
    */
   function queueActivatedComponent (vm) {
     // setting _inactive to false here so that a render function can
-    // rely on checking whether it's in an inactive tree (e.g. router-view)
+    // rely on checking whether it's in an inactive tree (e.g. index-views)
     vm._inactive = false;
     activatedChildren.push(vm);
   }
@@ -5607,7 +5607,7 @@
   var isSVG = makeMap(
     'svg,animate,circle,clippath,cursor,defs,desc,ellipse,filter,font-face,' +
     'foreignObject,g,glyph,image,line,marker,mask,missing-glyph,path,pattern,' +
-    'polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,view',
+    'polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,views',
     true
   );
 

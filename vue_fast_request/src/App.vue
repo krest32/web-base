@@ -1,16 +1,8 @@
-<script setup>
-import HelloWorld from './components/Header.vue'
-import TheWelcome from './components/Compoment.vue'
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <!--  使用 vie-route 进行页面跳转  -->
+    <router-view/>
+  </div>
 </template>
+<script setup>
+</script>

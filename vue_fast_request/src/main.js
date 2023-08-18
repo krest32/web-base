@@ -1,11 +1,9 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 
-// 引入 ui 全部，不推荐，最好按需引用
-import naive from 'naive-ui'
-import 'vfonts/Lato.css'
-import 'vfonts/FiraCode.css'
+import index from "./router/index";
+
 
 const app = createApp(App)
-app.use(naive)
+app.use(index)
 app.mount('#app')
