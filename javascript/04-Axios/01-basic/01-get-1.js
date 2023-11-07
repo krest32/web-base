@@ -16,14 +16,20 @@ var responseData =
         "config": ""
     }
 
-axios.get("http://localhost:8090/ping").then(response => {
-    // 返回数据
-    console.log(response.data);
-    // 返回状态吗
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
-}).catch(response => {
-    console.log(response)
-})
+axios.get("http://localhost:8090/ping")
+    .then(
+        response => {
+            // 返回数据
+            console.log(response.data);
+            // 返回状态吗
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.headers);
+            console.log(response.config);
+        }
+    )
+    .catch(
+        response => {
+            console.log(response)
+        }
+    )
